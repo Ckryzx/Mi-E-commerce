@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr ;
+  grid-template-rows: 60px 1fr 60px;
+  background-color: #f2f2f2;
+}
+
+.box {
+  border: 1px solid black;
+}
+
+.header {
+  grid-area: header;
+  background-color: #1c4b82;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #e0e0e0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 50%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.product-card h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.product-card button {
+  background-color: #1c4b82;
+  color: white;
+  border: none;
+  padding: 8px 150px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #163c68;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1c4b82;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
